@@ -1,0 +1,13 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "typecheck": "yarn tsc -p sw; yarn tsc -p server"
+  },
+  "devDependencies": {
+    "types-serviceworker": "^0.0.1",
+    "typescript": "^3.2.2"
+  }
+}
