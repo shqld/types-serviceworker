@@ -1,0 +1,5 @@
+## Example
+
+```sh
+yarn typecheck
+```
