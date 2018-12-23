@@ -15,8 +15,6 @@ and limitations under the License.
 
 
 
-/// <reference no-default-lib="true"/>
-
 
 /////////////////////////////
 /// Worker APIs
@@ -4198,7 +4196,6 @@ declare var isSecureContext: boolean;
 declare var location: WorkerLocation;
 declare var onerror: ((this: DedicatedWorkerGlobalScope, ev: ErrorEvent) => any) | null;
 declare var performance: Performance;
-declare var self: WorkerGlobalScope;
 declare function msWriteProfilerMark(profilerMarkName: string): void;
 /**
  * Dispatches a synthetic event event to target and returns true
