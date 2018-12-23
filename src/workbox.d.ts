@@ -1384,41 +1384,39 @@ interface IConfigOptions {
 	modulePathCb: ModulePathCallback;
 }
 
-declare class WorkboxNamespace {
-	static readonly backgroundSync: typeof BackgroundSyncNamespace;
-	static readonly broadcastUpdate: typeof BroadcastUpdateNamespace;
-	static readonly cacheableResponse: typeof CacheableResponseNamespace;
-	static readonly core: typeof CoreNamespace;
-	static readonly expiration: typeof ExpirationNamespace;
-	static readonly googleAnalytics: typeof GoogleAnalyticsNamespace;
-	static readonly precaching: typeof PrecachingNamespace;
-	static readonly rangeRequests: typeof RangeRequestsNamespace;
-	static readonly routing: typeof RoutingNamespace;
-	static readonly strategies: typeof StrategiesNamespace;
-	static readonly streams: typeof StreamsNamespace;
+declare interface WorkboxNamespace {
+	readonly backgroundSync: typeof BackgroundSyncNamespace;
+	readonly broadcastUpdate: typeof BroadcastUpdateNamespace;
+	readonly cacheableResponse: typeof CacheableResponseNamespace;
+	readonly core: typeof CoreNamespace;
+	readonly expiration: typeof ExpirationNamespace;
+	readonly googleAnalytics: typeof GoogleAnalyticsNamespace;
+	readonly precaching: typeof PrecachingNamespace;
+	readonly rangeRequests: typeof RangeRequestsNamespace;
+	readonly routing: typeof RoutingNamespace;
+	readonly strategies: typeof StrategiesNamespace;
+	readonly streams: typeof StreamsNamespace;
 
 	/**
 	 * Claim any currently available clients once the service worker becomes active. This is normally used in conjunction with skipWaiting().
 	 */
-	static clientsClaim (): void;
+	clientsClaim (): void;
 
 	/**
 	 * Load a Workbox module by passing in the appropriate module name.
 	 * This is not generally needed unless you know there are modules that are dynamically used and you want to safe guard use of the module while the user may be offline.
 	 * @param {string} moduleName
 	 */
-	static loadModule (moduleName: string): void;
+	loadModule (moduleName: string): void;
 
 	/**
 	 * Updates the configuration options. You can specify whether to treat as a debug build and whether to use a CDN or a specific path when importing other workbox-modules
 	 * @param {Partial<IConfigOptions>} config
 	 */
-	static setConfig (config?: Partial<IConfigOptions>): void;
+	setConfig (config?: Partial<IConfigOptions>): void;
 
 	/**
 	 * Force a service worker to become active, instead of waiting. This is normally used in conjunction with clientsClaim().
 	 */
-	static skipWaiting (): void;
+	skipWaiting (): void;
 }
-
-export default WorkboxNamespace;
