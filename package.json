@@ -1,0 +1,10 @@
+{
+  "name": "types-serviceworker",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Sho Miyamoto",
+    "email": "shqld8@gmail.com",
+    "url": "https://github.com/shqld"
+  }
+}
