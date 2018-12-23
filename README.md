@@ -4,7 +4,7 @@ Type definitions for ServiceWorker(and optionally Workbox)
 ### Install
 
 ```sh
-yarn add -D https://github.com/shqld/types-serviceworker
+yarn add -D types-serviceworker
 ```
 
 ### Usage
