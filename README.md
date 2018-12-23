@@ -1,6 +1,8 @@
 # types-serviceworker
 Type definitions for ServiceWorker(and optionally Workbox)
 
+See [example](https://github.com/shqld/types-serviceworker/tree/master/example).
+
 ### Install
 
 ```sh
